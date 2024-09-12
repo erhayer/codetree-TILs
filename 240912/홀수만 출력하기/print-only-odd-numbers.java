@@ -14,7 +14,7 @@ public class Main {
         }
 
         for (int i = 0; i < n; i++) {
-            if (arr[i] % 3 == 0) {
+            if (arr[i] % 3 == 0 && arr[i] % 2 == 1) {
                 System.out.println(arr[i]);
             }
         }
