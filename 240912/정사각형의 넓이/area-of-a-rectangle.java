@@ -10,6 +10,7 @@ public class Main {
         if(n>=5){
             System.out.println(n*n);
         } else {
+            System.out.println(n*n);
             System.out.println("tiny");
         }
     }
