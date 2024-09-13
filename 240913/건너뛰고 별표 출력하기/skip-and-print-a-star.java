@@ -10,7 +10,9 @@ public class Main {
 
 
         for (int i = 0; i < n; i++){
-            sb.append("*".repeat(i + 1));
+            for (int j = 0; j < i+1; j++){
+                sb.append("*");
+            }
             sb.append("\n").append("\n");
         }
         for (int i = n-1; i > 0; i--){
@@ -19,6 +21,6 @@ public class Main {
             }
             sb.append("\n").append("\n");
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }
