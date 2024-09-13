@@ -23,7 +23,7 @@ public class Main {
                 ind = !ind;
             }
             ind = true;
-            sb.append("\n\n");
+            sb.append("\n");
         }
 
         for (int i = n-2; i >= 0; i--) {
@@ -39,7 +39,7 @@ public class Main {
                 ind = !ind;
             }
             ind = true;
-            sb.append("\n\n");
+            sb.append("\n");
         }
 
         System.out.println(sb);
