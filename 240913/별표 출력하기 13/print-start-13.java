@@ -15,13 +15,13 @@ public class Main {
         for (int i = 0; i < n; i++) {
             if (ind == 1){
                 for (int j = 0; j < max_num; j++){
-                    sb.append("*");
+                    sb.append("*").append(" ");
                 }
                 ind *= -1;
                 max_num--;
             } else {
                 for (int j = 0; j < min_num; j++){
-                    sb.append("*");
+                    sb.append("*").append(" ");
                 }
                 ind *= -1;
                 min_num++;
@@ -31,13 +31,13 @@ public class Main {
         for (int i = n-1; i >= 0; i--) {
             if (ind == 1){
                 for (int j = 0; j < max_num; j++){
-                    sb.append("*");
+                    sb.append("*").append(" ");
                 }
                 ind *= -1;
                 max_num--;
             } else {
                 for (int j = 0; j < min_num; j++){
-                    sb.append("*");
+                    sb.append("*").append(" ");
                 }
                 ind *= -1;
                 min_num++;
