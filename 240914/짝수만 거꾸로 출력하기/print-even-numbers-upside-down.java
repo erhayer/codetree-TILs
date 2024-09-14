@@ -13,7 +13,7 @@ public class Main {
         
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = (Integer.parseInt(br.readLine()));
+            arr[i] = (Integer.parseInt(st.nextToken()));
         }
         int temp;
         for (int i = n-1; i >= 0; i--){
