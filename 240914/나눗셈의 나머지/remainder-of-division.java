@@ -16,8 +16,8 @@ public class Main {
             cnt[i] = 0;
         }
         while(a>1){
-           a /= b;
            cnt[a%b]++; 
+           a /= b;
         }
 
         int sum = 0;
