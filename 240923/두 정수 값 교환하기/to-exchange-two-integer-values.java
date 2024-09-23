@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 class intWrapper {
     int value;
-    intWrapper(int n){
+    
+    public intWrapper(int n){
         this.value = n;
     }
 }
