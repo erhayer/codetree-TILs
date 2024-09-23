@@ -20,7 +20,7 @@ public class Main {
         if (m == 2){
             if (d <= 28 && d > 0) return true;
         }
-        if (m == 2 || m == 4 || m == 6 || m == 9 || m == 11){
+        if (m == 4 || m == 6 || m == 9 || m == 11){
             if (d <= 30 && d > 0) return true;
         }
         return false;
