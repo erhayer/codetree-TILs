@@ -14,7 +14,8 @@ public class Main {
     }
     public static int max(int[] arr, int index, int m){
         if (index == arr.length) return m;
-        if (arr[index] > m) return max(arr, ++index, arr[index]);
+        int temp = arr[index];
+        if (temp > m) return max(arr, ++index, temp);
         return max(arr, ++index, m);
     }
 }
