@@ -14,7 +14,7 @@ public class Main {
         String temp = "";
         while(idx < n){
             temp = sc.next();
-            if (t.length() >= temp.length() && temp.substring(0, t.length()).compareTo(t) == 0){
+            if (t.length() <= temp.length() && temp.substring(0, t.length()).compareTo(t) == 0){
                 arr[cnt++] = temp;
             }
             idx++;
