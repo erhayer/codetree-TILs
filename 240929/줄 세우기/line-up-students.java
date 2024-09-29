@@ -16,7 +16,7 @@ class Student implements Comparable<Student> {
     public int compareTo(Student student) {
         if (student.h == this.h){
             if (this.w == student.w) return this.num - student.num;
-            return student.w = this.w;
+            return student.w - this.w;
         }
         return student.h - this.h;
     }
@@ -41,7 +41,6 @@ public class Main {
         }
 
         Arrays.sort(arr);
-
         for (int i = 0; i < n; i++){
             System.out.println(arr[i].toStr());
         }
