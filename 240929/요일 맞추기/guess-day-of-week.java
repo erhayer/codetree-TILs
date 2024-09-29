@@ -7,7 +7,7 @@ public class Main {
 
         int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt(), d = sc.nextInt();
 
-        int day = dateToNum(c, d) - dateToNum(a, b) < 0 ? dateToNum(c, d) - dateToNum(a, b) + 7: (dateToNum(c, d) - dateToNum(a, b)) % 7;
+        int day = dateToNum(c, d) - dateToNum(a, b) < 0 ? (dateToNum(c, d) - dateToNum(a, b))%7 + 7 : (dateToNum(c, d) - dateToNum(a, b)) % 7;
         String daystr;
         switch (day) {
             case 0:
