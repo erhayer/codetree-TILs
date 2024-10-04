@@ -17,7 +17,7 @@ public class Main {
             x1 = sc.nextInt() + 100;
             x2 = sc.nextInt() + 100;
 
-            for (int j = 0; j < x2; j++) arr[j]++;
+            for (int j = x1; j < x2; j++) arr[j]++;
         }
 
         int max = 0;
