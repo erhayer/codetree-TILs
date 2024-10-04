@@ -14,8 +14,8 @@ public class Main {
 
         int x1, x2;
         for (int i = 0; i < n; i++){
-            x1 = sc.nextInt();
-            x2 = sc.nextInt();
+            x1 = sc.nextInt() + 100;
+            x2 = sc.nextInt() + 100;
 
             for (int j = 0; j < x2; j++) arr[j]++;
         }
