@@ -14,7 +14,9 @@ public class Main {
         int d_to_d = monthDateToInt(m2, d2) - monthDateToInt(m1, d1);
         int result = 0;
 
-        if (day.compareTo("Mon") == 0){
+        if (d_to_d == 0){
+            result = 0;
+        } else if (day.compareTo("Mon") == 0){
             result = d_to_d / 7 + 1;
         } else if ((day.compareTo("Tue") == 0)){
             result = (d_to_d - 1) / 7 + 1;
