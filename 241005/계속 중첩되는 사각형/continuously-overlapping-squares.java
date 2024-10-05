@@ -23,6 +23,12 @@ public class Main {
                         mat[j][k] = 1;
                     }
                 }
+            } else {
+                for (int j = x1 + 100; j < x2 + 100; j++){
+                    for (int k = y1 + 100; k < y2 + 100; k++){
+                        mat[j][k] = 0;
+                    }
+                }
             }
             isBlue = !isBlue;
         }
