@@ -16,8 +16,8 @@ public class Main {
             x2 = sc.nextInt();
             y2 = sc.nextInt();
 
-            for (int j = x1; j < x2; j++){
-                for (int k = y1; k < y2; k++){
+            for (int j = x1 + 100; j < x2 + 100; j++){
+                for (int k = y1 + 100; k < y2 + 100; k++){
                     mat[j][k] = 1;
                 }
             }
