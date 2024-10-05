@@ -18,7 +18,7 @@ public class Main {
             x = Integer.parseInt(st.nextToken()) + MAX_NUM;
             y = Integer.parseInt(st.nextToken()) + MAX_NUM;
 
-            for (int j = x - 8; j < x; j++){
+            for (int j = x; j < x + 8; j++){
                 for (int k = y; k < y + 8; k++){
                     mat[j][k] = true;
                 }
