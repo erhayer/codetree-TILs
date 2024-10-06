@@ -60,7 +60,7 @@ public class Main {
 
         int ans = -1;
 
-        for (int i = 1; i < MAX_NUM; i++){
+        for (int i = 1; i < MAX_NUM*1000; i++){
             if (i > index_a || i > index_b) break;
             if (a[i] == b[i]) {
                 ans = i;
