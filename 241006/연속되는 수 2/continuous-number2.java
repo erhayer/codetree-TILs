@@ -15,9 +15,9 @@ public class Main {
 
         for (int i = 0; i < n; i++){
             if (i == 0 || arr[i-1] != arr[i]) {
-                if (count > max) max = count;
                 count = 1;
             } else count++;
+            if (count > max) max = count;
         }
 
         System.out.println(max);
