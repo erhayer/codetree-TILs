@@ -18,7 +18,10 @@ public class Main {
 
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-
+        for (int i = 0; i < MAX_NUM; i++){
+            a[i] = -10000000;
+            b[i] = -10000000;
+        }
         for (int i = 0; i < n; i++){
             st = new StringTokenizer(br.readLine());
             char d = st.nextToken().charAt(0);
@@ -61,7 +64,8 @@ public class Main {
         int ans = -1;
 
         for (int i = 1; i < MAX_NUM; i++){
-            if (a[i]-b[i] == 0) {
+            if (a[i] == -10000000 || b[i] == -10000000) break;
+            if (a[i] == b[i]) {
                 ans = i;
                 break;
             }
