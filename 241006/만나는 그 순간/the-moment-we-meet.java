@@ -5,8 +5,8 @@ import java.util.StringTokenizer;
 
 public class Main {
     public static final int MAX_NUM = 1000;
-    public static int[] a = new int[MAX_NUM];
-    public static int[] b = new int[MAX_NUM];
+    public static int[] a = new int[MAX_NUM + 1];
+    public static int[] b = new int[MAX_NUM + 1];
     public static int index_a = 0;
     public static int position_a = 0;
     public static int index_b = 0;
