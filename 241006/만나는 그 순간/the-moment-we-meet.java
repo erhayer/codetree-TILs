@@ -61,7 +61,7 @@ public class Main {
         int ans = -1;
 
         for (int i = 1; i < MAX_NUM; i++){
-            if (a[i] == b[i]) {
+            if (a[i]-b[i] == 0) {
                 ans = i;
                 break;
             }
