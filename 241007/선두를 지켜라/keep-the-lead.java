@@ -52,8 +52,8 @@ public class Main {
             }
             if (temp*(a[i] - b[i]) < 0) {
                 cnt++;
+                temp = a[i] - b[i];
             }
-            temp = a[i] - b[i];
         }
 
         System.out.println(cnt);
