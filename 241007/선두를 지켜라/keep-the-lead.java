@@ -43,23 +43,19 @@ public class Main {
             }
         }
 
-        int[] diff = new int[index_a+1];
-        for (int i = 1; i <= index_a; i++){
-            diff[i] = a[i] - b[i];
-        }
-
-        int temp = 0;
         int cnt = 0;
-        for (int i = 1; i <= index_a; i++){
-            if (diff[i]==0) continue;
-            if (temp == 0) temp = diff[i];
-            if (temp*diff[i] < 0){
-                cnt++;
-                temp = diff[i];
+        int temp = 0;
+        for (int i = 1; i <= index_a; i++) {
+            if (a[i] - b[i] == 0) continue;
+            if (temp == 0) {
+                temp = a[i] - b[i];
             }
+            if (temp*(a[i] - b[i]) < 0) {
+                cnt++;
+            }
+            temp = a[i] - b[i];
         }
 
         System.out.println(cnt);
-
     }
 }
