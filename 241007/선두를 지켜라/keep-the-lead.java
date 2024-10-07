@@ -44,7 +44,7 @@ public class Main {
         }
 
         int cnt = 0;
-        int temp = 0;
+        long temp = 0;
         for (int i = 1; i <= index_a; i++) {
             if (a[i] - b[i] == 0) continue;
             if (temp == 0) {
