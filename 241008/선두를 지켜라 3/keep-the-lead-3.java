@@ -32,11 +32,14 @@ public class Main{
                 b[++t_b] = b[t_b-1] + v;
             }
         }
+        // for (int i = 0; i < t_a; i++) {
+        //     System.out.println(a[i] + " " + b[i]);
+        // }
 
-        int aCompareToB = 0;
+        int aCompareToB = compareAB(a[1], b[1]);
         int cnt = 0;
         int temp;
-        for (int i = 1; i <= t_a; i++){
+        for (int i = 2; i <= t_a; i++){
             temp = compareAB(a[i], b[i]);
             if (aCompareToB != temp) {
                 cnt += 2;
