@@ -42,9 +42,7 @@ public class Main{
         for (int i = 2; i <= t_a; i++){
             temp = compareAB(a[i], b[i]);
             if (aCompareToB != temp) {
-                cnt += 2;
-                if (aCompareToB == 0 || temp == 0) cnt--;
-                aCompareToB = temp;
+                cnt += 1;
             }
             //System.out.println(cnt);
         }
