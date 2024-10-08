@@ -43,8 +43,9 @@ public class Main{
             temp = compareAB(a[i], b[i]);
             if (aCompareToB != temp) {
                 cnt += 1;
+                aCompareToB = temp;
             }
-            //System.out.println(cnt);
+            System.out.println(cnt);
         }
 
         System.out.println(cnt);
