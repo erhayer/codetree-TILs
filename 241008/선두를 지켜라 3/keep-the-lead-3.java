@@ -37,7 +37,7 @@ public class Main{
         // }
 
         int aCompareToB = compareAB(a[1], b[1]);
-        int cnt = 0;
+        int cnt = 1;
         int temp;
         for (int i = 2; i <= t_a; i++){
             temp = compareAB(a[i], b[i]);
@@ -46,6 +46,7 @@ public class Main{
                 if (aCompareToB == 0 || temp == 0) cnt--;
                 aCompareToB = temp;
             }
+            //System.out.println(cnt);
         }
 
         System.out.println(cnt);
