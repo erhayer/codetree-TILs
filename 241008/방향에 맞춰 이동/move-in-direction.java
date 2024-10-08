@@ -17,13 +17,13 @@ public class Main {
             t = sc.nextInt();
 
             for (int j = 0; j < t; j++){
-                if (x == 'N'){
+                if (d == 'N'){
                     x += dx[0];
                     y += dy[0];
-                } else if (x =='E'){
+                } else if (d =='E'){
                     x += dx[1];
                     y += dy[1];
-                } else if (x =='S'){
+                } else if (d =='S'){
                     x += dx[2];
                     y += dy[2];
                 } else {
