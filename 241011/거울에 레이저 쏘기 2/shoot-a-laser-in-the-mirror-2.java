@@ -26,27 +26,33 @@ public class Main {
         int dir = 1;
 
         //초기 위치, 방향 설정
-        int tr, tc;
-        for (int i = 0; i < k; i++){
-            tr = r + dr[dir];
-            tc = c + dc[dir];
-            if (!inRange(tr, tc)){
-                dir++;
-                i--;
-            }
-            r += dr[dir];
-            c += dc[dir];
+        int[] init = new int[]{0, n+1, n+1, 0};
+
+        int f = (k-1)/n;
+        if (f == 0) {
+            r = init[f];
+            c = (k-1)%n + 1;
+            dir = 2;
+        } else if (f == 1) {
+            r = (k-1)%n + 1;
+            c = init[f];
+            dir = 3;
+        } else if (f == 2) {
+            r = init[f];
+            c = n -(k-1)%n;
+            dir = 0;
+        } else {
+            r = n -(k-1)%n;
+            c = init[f];
+            dir = 1;
         }
-        dir = (dir + 1) % 4;
 
         // '/' 0 -> 1 1 -> 0 2 -> 3 3 -> 2
         // '\' 0 -> 3 3 -> 0 1 -> 2 2 -> 1
         int count = 0;
         while (true) {
-            //System.out.print(r + " " + c +" -> ");
             r += dr[dir];
             c += dc[dir];
-            //System.out.println(r + " " + c);
 
             if (mat[r][c] == '/') {
                 dir = dir + (dir%2==0 ? 1 : -1);
@@ -61,6 +67,6 @@ public class Main {
         System.out.println(count);
     }
     public static boolean inRange(int r, int c) {
-        return r >= 0 && r < n && c > 0 && c < n;
+        return r >= 0 && r < n+2 && c > 0 && c < n+2;
     }
 }
