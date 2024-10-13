@@ -29,7 +29,7 @@ public class Main {
                 if (isReverseDiagonalOmok(i, j)) {
                     return new int[]{tile[i][j], i+1, j+1};
                 }
-                if (isVerticalOmok(i, j)) {
+                if (isDiagonalOmok(i, j)) {
                     return new int[]{tile[i][j], i+1, j+1};
                 }
             }
