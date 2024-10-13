@@ -35,7 +35,9 @@ public class Main {
     public static boolean isMagic(char[] arr, int n) {
         int cnt_g = 0;
         int cnt_h = 0;
-        if (!(arr[0] > 'G' && arr[n-1] > 'G')) return false;
+
+        if (!(arr[0] >= 'G' && arr[n-1] >= 'G')) return false;
+
         for (int i = 0; i < n; i++){
             if (arr[i] == 'G') cnt_g++;
             if (arr[i] == 'H') cnt_h++;
