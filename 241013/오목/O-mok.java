@@ -26,12 +26,6 @@ public class Main {
     public static int[] findOmok() {
         for (int i = 2; i < 17; i++) {
             for (int j = 2; j < 17; j++) {
-                if (isHorizontalOmok(i, j)) {
-                    return new int[]{tile[i][j], i+1, j+1};
-                }
-                if (isDiagonalOmok(i, j)) {
-                    return new int[]{tile[i][j], i+1, j+1};
-                }
                 if (isReverseDiagonalOmok(i, j)) {
                     return new int[]{tile[i][j], i+1, j+1};
                 }
@@ -40,7 +34,20 @@ public class Main {
                 }
             }
         }
-
+        for (int i = 0; i < 19; i++) {
+            for (int j = 2; j < 17; j++) {
+                if (isHorizontalOmok(i, j)) {
+                    return new int[]{tile[i][j], i+1, j+1};
+                }
+            }
+        }
+        for (int i = 2; i < 17; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (isVerticalOmok(i, j)) {
+                    return new int[]{tile[i][j], i+1, j+1};
+                }
+            }
+        }
         return new int[]{0, 0, 0};
     }
 
