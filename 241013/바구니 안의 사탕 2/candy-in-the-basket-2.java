@@ -17,12 +17,12 @@ public class Main {
             num = sc.nextInt();
             x = sc.nextInt();
 
-            arr[x-1] = num;
+            arr[x-1] += num;
         }
 
         int max = 0;
         int temp;
-        for (int i = k; i < MAX_X-k; i++){
+        for (int i = k; i < MAX_X - k; i++){
             temp = 0;
             for (int j = i - k; j <= i + k; j++) {
                 temp += arr[j];
