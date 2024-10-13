@@ -24,16 +24,19 @@ public class Main {
     }
 
     public static int[] findOmok() {
-        for (int i = 0; i < 15; i++) {
-            for (int j = 0; j < 15; j++) {
+        for (int i = 2; i < 17; i++) {
+            for (int j = 2; j < 17; j++) {
                 if (isHorizontalOmok(i, j)) {
-                    return new int[]{tile[i][j], i+1, j+3};
+                    return new int[]{tile[i][j], i+1, j+1};
                 }
                 if (isDiagonalOmok(i, j)) {
-                    return new int[]{tile[i][j], i+3, j+3};
+                    return new int[]{tile[i][j], i+1, j+1};
+                }
+                if (isReverseDiagonalOmok(i, j)) {
+                    return new int[]{tile[i][j], i+1, j+1};
                 }
                 if (isVerticalOmok(i, j)) {
-                    return new int[]{tile[i][j], i+3, j+1};
+                    return new int[]{tile[i][j], i+1, j+1};
                 }
             }
         }
@@ -43,7 +46,7 @@ public class Main {
 
     public static boolean isHorizontalOmok(int r, int c) {
         if (tile[r][c] == 0) return false;
-        for (int i = 1; i < 5; i++){
+        for (int i = -2; i < 3; i++){
             if (tile[r][c] != tile[r][c+i]) return false; 
         }
         return true;
@@ -51,15 +54,23 @@ public class Main {
 
     public static boolean isDiagonalOmok(int r, int c) {
         if (tile[r][c] == 0) return false;
-        for (int i = 1; i < 5; i++){
+        for (int i = -2; i < 3; i++){
             if (tile[r][c] != tile[r+i][c+i]) return false; 
+        }
+        return true;
+    }
+
+    public static boolean isReverseDiagonalOmok(int r, int c) {
+        if (tile[r][c] == 0) return false;
+        for (int i = -2; i < 3; i++){
+            if (tile[r][c] != tile[r-i][c+i]) return false; 
         }
         return true;
     }
 
     public static boolean isVerticalOmok(int r, int c) {
         if (tile[r][c] == 0) return false;
-        for (int i = 1; i < 5; i++){
+        for (int i = -2; i < 3; i++){
             if (tile[r][c] != tile[r+i][c]) return false; 
         }
         return true;
