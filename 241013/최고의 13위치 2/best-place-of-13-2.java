@@ -15,10 +15,11 @@ public class Main {
 
         int max = 0;
         int temp;
-        for (int i = 0; i < n-1; i++){
+        for (int i = 0; i < n; i++){
             for (int j = 0; j < n-2; j++){
-                for (int k = i+1; k < n; k++){
+                for (int k = i; k < n; k++){
                     for (int l = 0; l < n-2; l++){
+                        if (i == k && (j - l) < 3) continue;
                         temp = mat[i][j] + mat[i][j+1] + mat[i][j+2] + mat[k][l] + mat[k][l+1] + mat[k][l+2];
 
                         max = Math.max(temp, max);
