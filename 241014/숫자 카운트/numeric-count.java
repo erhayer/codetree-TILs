@@ -16,7 +16,9 @@ public class Main {
 
         for (int i = 1; i <= 9; i++) {
             for (int j = 1; j <= 9; j++) {
+                if (j == i) continue;
                 for (int k = 1; k <= 9; k++) {
+                    if (k == i || k == j) continue;
                     if (isQueries(queries, i*100+j*10+k)) cnt++;
                 }
             }
