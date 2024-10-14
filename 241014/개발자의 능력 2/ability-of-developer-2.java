@@ -5,8 +5,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int[] devs = new int[6];
+        int sum = 0;
+        int t;
         for (int i = 0; i < 6; i++){
-            devs[i] = sc.nextInt();
+            t = sc.nextInt();
+            devs[i] = t;
+            sum += t;
         }
         
         int min = Integer.MAX_VALUE;
@@ -17,12 +21,11 @@ public class Main {
             for (int j = secondf + 1; j < 6; j++){
                 if (j == i) continue;
                 b = devs[secondf] + devs[j];
-                
-                c = 0;
-                for (int k = 2; k < 6; k++){
-                    if(k == i || k == j) continue;
-                    c += devs[k];
-                }
+
+                c = sum - a - b;
+
+                //System.out.println(a + " " + b + " " + c);
+                //System.out.println(Math.max(a, Math.max(b, c)) - Math.min(a, Math.min(b, c)));
 
                 min = Math.min(Math.max(a, Math.max(b, c)) - Math.min(a, Math.min(b, c)), min);
             }
