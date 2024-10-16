@@ -10,7 +10,7 @@ public class Main {
         int[][] games = new int[k][n];
         for (int i = 0; i < k; i++) {
             for (int j = 0; j < n; j++){
-                games[i][j] = sc.nextInt();
+                games[i][sc.nextInt()-1] = j;
             }
         }
 
