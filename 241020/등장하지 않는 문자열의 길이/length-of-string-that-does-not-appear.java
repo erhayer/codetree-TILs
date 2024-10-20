@@ -25,11 +25,13 @@ public class Main {
                 if (!temp) {
                     break;
                 }
-
-                min = i;
             }
 
-            if (min != n) break;
+
+            if (temp) {
+                min = i;
+                break;
+            }
         }
 
         System.out.println(min);
