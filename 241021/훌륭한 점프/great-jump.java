@@ -14,7 +14,7 @@ public class Main {
 
         int dist;
         boolean isMin = false;
-        for (int i = 100; i >= arr[0]; i--) {
+        for (int i = 100; i >= Math.max(arr[0], arr[n-1]); i--) {
             dist = 0;
             for (int j = 1; j < n; j++) {
                 dist++;
@@ -33,8 +33,8 @@ public class Main {
                 break;
             }
 
-            if (i == arr[0]) {
-                System.out.println(i);
+            if (i == Math.max(arr[0], arr[n-1])) {
+                System.out.println(Math.max(arr[0], arr[n-1]));
                 break;
             }
         }
