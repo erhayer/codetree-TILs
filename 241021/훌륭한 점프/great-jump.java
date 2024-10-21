@@ -32,6 +32,11 @@ public class Main {
                 System.out.println(i+1);
                 break;
             }
+
+            if (i == arr[0]) {
+                System.out.println(i);
+                break;
+            }
         }
     }
 }
