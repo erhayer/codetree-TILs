@@ -15,7 +15,7 @@ public class Main {
 
         int sum;
         int wallCount;
-        for (int i = max(arr, n); i <= Integer.MAX_VALUE; i++) {
+        for (int i = max(arr, n); i <= MAX_H*n; i++) {
             wallCount = 0;
             sum = 0;
 
@@ -25,9 +25,11 @@ public class Main {
                     sum = arr[j];
                     wallCount++;
                 }
+                //System.out.println(sum);
             }
 
-            if (wallCount == m-1) {
+            //System.out.println(i + " " + wallCount);
+            if (wallCount <= m-1) {
                 System.out.println(i);
                 break;
             }
