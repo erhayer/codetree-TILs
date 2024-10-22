@@ -15,7 +15,7 @@ public class Main {
 
         int sum;
         int wallCount;
-        for (int i = max(arr, n); i <= MAX_H; i++) {
+        for (int i = max(arr, n); i <= Integer.MAX_VALUE; i++) {
             wallCount = 0;
             sum = 0;
 
