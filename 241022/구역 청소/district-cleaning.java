@@ -14,14 +14,18 @@ public class Main {
             System.out.println(b-a+d-c);
         } else if (c >= a) {
             if (b >= d) {
+                //System.out.println("!");
                 System.out.println(b-a);
             } else {
-                System.out.println(b-a + d-c);
+                //System.out.println("!1");
+                System.out.println(b-a + d-b);
             }
         } else {
             if (b > d) {
+                //System.out.println("!2");
                 System.out.println(d-c + b-d);
             } else {
+                //System.out.println("!3");
                 System.out.println(d-c);
             }
         }
