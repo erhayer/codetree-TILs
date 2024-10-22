@@ -9,10 +9,17 @@ public class Main {
         int x2 = sc.nextInt();
 
         boolean f = true;
+        int x3, x4;
         for (int i = 1; i < n; i++) {
-            if (!isIntersecting(x1, x2, sc.nextInt(), sc.nextInt())) {
+            x3 = sc.nextInt();
+            x4 = sc.nextInt();
+
+            if (!isIntersecting(x1, x2, x3, x4)) {
                 f = false;
                 break;
+            } else {
+                x1 = Math.max(x1, x3);
+                x2 = Math.min(x2, x4);
             }
         }
 
