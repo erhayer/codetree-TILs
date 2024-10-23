@@ -11,7 +11,7 @@ public class Main {
         int[] users = new int['Z' + 1];
 
         int[][] messages = new int[m][2];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < m; i++) {
             char user = sc.next().charAt(0);
             int unread = sc.nextInt();
 
@@ -21,7 +21,7 @@ public class Main {
         if (messages[p-1][1] == 0) {
             System.out.println();
         } else {
-            for (int i = p-1; i < n; i++) {
+            for (int i = p-1; i < m; i++) {
                 users[messages[i][0]]++;
             }
             for (int i = p-2; i >= 0; i--) {
