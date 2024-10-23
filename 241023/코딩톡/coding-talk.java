@@ -17,14 +17,18 @@ public class Main {
 
             messages[i] = new int[]{user, unread};
         }
+        
+        if (messages[p-1][1] == 0) {
+            System.out.println();
+        } else {
+            for (int i = p-1; i < n; i++) {
+                users[messages[i][0]]++;
+            }
 
-        for (int i = p-1; i < n; i++) {
-            users[messages[i][0]]++;
-        }
-
-        for (int i = 'A'; i < 'A' + n; i++) {
-            if (users[i] > 0) continue;
-            System.out.print((char)i + " ");
+            for (int i = 'A'; i < 'A' + n; i++) {
+                if (users[i] > 0) continue;
+                System.out.print((char)i + " ");
+            }
         }
     }
 }
