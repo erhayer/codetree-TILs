@@ -24,6 +24,10 @@ public class Main {
             for (int i = p-1; i < n; i++) {
                 users[messages[i][0]]++;
             }
+            for (int i = p-2; i >= 0; i--) {
+                if (messages[i][1] != messages[i+1][1]) break;
+                users[messages[i][0]]++;
+            }
 
             for (int i = 'A'; i < 'A' + n; i++) {
                 if (users[i] > 0) continue;
