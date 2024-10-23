@@ -26,10 +26,18 @@ public class Main {
             if (delta[i] < 0) {
                 for (int j = i+1; j < n; j++) {
                     if (delta[j] > 0) {
-                        distanceSum += (j-i) * -delta[i];
-                        delta[j] -= delta[i];
-                        delta[i] = 0;
+                        if (-delta[i] >= delta[j]) {
+                            distanceSum += (j-i) * delta[j];
+                            delta[i] += delta[j];
+                            delta[j] = 0;
+                        } else {
+                            distanceSum += (j-i) * -delta[i];
+                            delta[j] += delta[i];
+                            delta[i] = 0;
+                        }
                     }
+
+                    if (delta[i] == 0) break;
                 }
             }
         }
