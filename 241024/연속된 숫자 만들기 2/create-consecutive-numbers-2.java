@@ -10,7 +10,7 @@ public class Main {
 
         if (Math.abs(x1-x2) == 1 && Math.abs(x2-x3) == 1) {
             System.out.println(0);
-        } else if (Math.abs(x1-x2) == 1 || Math.abs(x2-x3) == 1) {
+        } else if (Math.abs(x1-x2) == 2 || Math.abs(x2-x3) == 2) {
             System.out.println(1);
         } else {
             System.out.println(2);
