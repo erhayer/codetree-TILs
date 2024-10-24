@@ -31,17 +31,23 @@ public class Main {
         //System.out.println((x1+x2)/2);
         arr[(x1+x2)/2] = 1;
 
-        tempDist = 1;
+        //System.out.println();
+        //for (int i = 0; i < n; i++) {
+        //    System.out.print(arr[i] + " ");
+        //}
+        //System.out.println();
+
+        tempDist = 0;
         int minDist = n;
         for (int i = 1; i < n; i++) {
+            tempDist++;
             if (arr[i] == 1) {
                 if (tempDist < minDist) {
                     minDist = tempDist;
-
-                    tempDist = 0;
+                    //System.out.println(i + "!");
                 }
+                tempDist = 0;
             }
-            tempDist++;
         }
 
         System.out.println(minDist);
