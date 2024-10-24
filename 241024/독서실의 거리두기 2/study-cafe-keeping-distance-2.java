@@ -63,10 +63,10 @@ public class Main {
         //}
         //System.out.println();
 
-        tempDist = 0;
+        tempDist = -1;
         int minDist = n;
         isInitialized = false;
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             tempDist++;
             if (isInitialized){
                 if (arr[i] == 1) {
