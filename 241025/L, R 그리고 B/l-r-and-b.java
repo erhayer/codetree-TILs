@@ -32,7 +32,7 @@ public class Main {
         }
         //4 2, 8 5
         int dist = Math.abs(lR - bR) + Math.abs(lC - bC) - 1;
-        if ((lR == rR && rR == bR) || (lC == rC && rC == bC)) {
+        if ((lR == rR && rR == bR && ((lR < rR && rR < bR) || (lR > rR && rR > bR))) || (lC == rC && rC == bC) && ((lC < rC && rC < bC) || (lC > rC && rC > bC))) {
             dist += 2;
         }
 
