@@ -44,15 +44,15 @@ public class Main {
     public static int status(int a, int b, int c) {
         if (a == b && b == c) {
             return 0;
-        } else if (a == b) {
-            return 1;
-        } else if (b == c) {
-            return 2;
-        } else if (c == a) {
-            return 3;
         } else if (a > b && a > c) {
-            return 4;
+            return 1;
         } else if (b > a && b > c) {
+            return 2;
+        } else if (c > a && c > b) {
+            return 3;
+        } else if (a == b) {
+            return 4;
+        } else if (b == c) {
             return 5;
         } else {
             return 6;
