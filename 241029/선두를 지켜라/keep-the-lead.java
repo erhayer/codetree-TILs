@@ -38,8 +38,8 @@ public class Main {
             }
         }
 
-        int status = 0;
-        int tempStatus;
+        long status = 0;
+        long tempStatus;
         int cnt = 0;
         for (int i = 1; i <= timeA; i++) {
             tempStatus = timelineA[i] - timelineB[i];
