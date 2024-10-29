@@ -11,8 +11,8 @@ public class Main {
         int posB = 0;
         int timeA = 0;
         int timeB = 0;
-        int[] timelineA = new int[1000];
-        int[] timelineB = new int[1000];
+        int[] timelineA = new int[1000000+1];
+        int[] timelineB = new int[1000000+1];
 
         int v, t;
         for (int i = 0; i < n; i++) {
