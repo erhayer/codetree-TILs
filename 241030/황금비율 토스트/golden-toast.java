@@ -42,7 +42,7 @@ public class Main {
         pos = breads.listIterator();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < breads.size(); i++) {
-            sb.append(sb.next());
+            sb.append(pos.next());
         }
 
         System.out.println(sb);
