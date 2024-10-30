@@ -39,8 +39,9 @@ public class Main {
             }
         }
 
+        pos = breads.listIterator();
         for (int i = 0; i < breads.size(); i++) {
-            System.out.print(breads.get(i));
+            System.out.print(pos.next());
         }
     }
 }
