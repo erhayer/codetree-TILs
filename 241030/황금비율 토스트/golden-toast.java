@@ -40,8 +40,11 @@ public class Main {
         }
 
         pos = breads.listIterator();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < breads.size(); i++) {
-            System.out.print(pos.next());
+            sb.append(sb.next());
         }
+
+        System.out.println(sb);
     }
 }
