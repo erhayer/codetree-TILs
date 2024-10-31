@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Main {
     public static final int MAX_LENGTH = 6;
@@ -18,16 +18,16 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        LinkedList<Integer>[] buckets;
-        LinkedList<Integer> tempSortedArr;
+        ArrayList<Integer>[] buckets;
+        ArrayList<Integer> tempSortedArr;
         for (int i = 1; i <= MAX_LENGTH; i++) {
-            buckets = new LinkedList[10];
+            buckets = new ArrayList[10];
 
             for (int j = 0; j < 10; j++) {
-                buckets[j] = new LinkedList<Integer>();
+                buckets[j] = new ArrayList<Integer>();
             }
 
-            tempSortedArr = new LinkedList<Integer>();
+            tempSortedArr = new ArrayList<Integer>();
 
             for (int j = 0; j < n; j++) {
                 //System.out.print(getDigit(arr[j], i));
