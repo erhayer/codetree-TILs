@@ -19,21 +19,24 @@ public class Main {
 
         //horizontal
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - 2; j++) {
+            for (int j = 0; j < m - 2; j++) {
+                //System.out.println(i + " " + j);
                 max = Math.max(calHorizontalSum(matrix, i, j), max);
             }
         }
 
+        //System.out.println(max);
+
         //Vertical
         for (int i = 0; i < n-2; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 max = Math.max(calVerticalSum(matrix, i, j), max);
             }
         }
 
         //stair
         for (int i = 0; i < n-1; i++) {
-            for (int j = 0; j < n-1; j++) {
+            for (int j = 0; j < m-1; j++) {
                 max = Math.max(calStairSum(matrix, i, j), max);
             }
         }
