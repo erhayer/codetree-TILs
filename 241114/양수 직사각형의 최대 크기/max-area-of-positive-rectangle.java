@@ -25,7 +25,7 @@ public class Main {
             }
         }
 
-        int max = 0;
+        int max = -1;
 
         for (int r1 = 0; r1 < n; r1++) {
             for (int c1 = 0; c1 < m; c1++) {
