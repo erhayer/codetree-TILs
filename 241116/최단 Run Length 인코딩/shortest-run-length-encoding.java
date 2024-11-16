@@ -47,11 +47,11 @@ public class Main {
             } else {
                 currentCount++;
             }
-
-            if (i == str.length()-1) {
-                sb.append(currentCount);
-            }
         }
+        sb.append(currentCount);
+
+
+        //System.out.println(sb);
 
         return sb.toString().length();
     }
