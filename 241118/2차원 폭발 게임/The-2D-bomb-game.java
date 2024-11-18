@@ -21,8 +21,21 @@ public class Main {
         }
 
         for (int i = 0; i < k; i++) {
-            explode();
+            boolean exploded = true;
+
+            while (exploded) {
+                exploded = explode();
+            }
+            
+            //print();
             rotate();
+
+            exploded = true;
+            while (exploded) {
+                exploded = explode();
+            }
+
+            //print();
         }
 
         int count = 0;
@@ -50,18 +63,22 @@ public class Main {
             }
         }
 
+        //print();
         drop();
     }
 
-    public static void explode() {
+    public static boolean explode() {
+        boolean exploded = false;
+
         for (int i = 0; i < n; i++) {
-            int currNum = -1;
+            int currNum = 0;
             int start = 0;
             int numCount = 0;
 
             for (int j = 0; j < n; j++) {
                 if (currNum != mat[j][i]) {
-                    if (numCount >= m) {
+                    if (currNum != 0 && numCount >= m) {
+                        exploded = true;
                         for (int k = start; k < j; k++) {
                             mat[k][i] = 0;
                         }
@@ -75,14 +92,19 @@ public class Main {
                 numCount++;
             }
 
-            if (numCount >= m) {
+            if (currNum != 0 && numCount >= m) {
+                exploded = true;
                 for (int k = start; k < n; k++) {
                     mat[k][i] = 0;
                 }
             }
         }
 
+        //print();
         drop();
+        //print();
+
+        return exploded;
     }
 
     public static void drop() {
