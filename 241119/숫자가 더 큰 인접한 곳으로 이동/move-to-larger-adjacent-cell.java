@@ -40,6 +40,7 @@ public class Main {
                     r += dr[i];
                     c += dc[i];
                     sb.append(mat[r][c]).append(" ");
+                    break;
                 }
             }
         }
