@@ -42,6 +42,8 @@ public class Main {
                         time++;
                     }
                 } else {
+                    r += dr[dir];
+                    c += dc[dir];
                     time++;
                     escaped = true;
                 }
