@@ -22,7 +22,7 @@ public class Main {
             }
         }
 
-        int minRow = n;
+        int minRow = n-1;
         for (int c = k; c < k+m; c++) {
             for (int i = 0; i < n; i++) {
                 if (mat[i][c] == 1) {
