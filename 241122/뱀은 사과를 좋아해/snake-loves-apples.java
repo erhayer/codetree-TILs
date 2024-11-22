@@ -34,7 +34,9 @@ public class Main {
             mat[r][c] = 'a';
         }
 
-        Queue<Integer[]> tails = new LinkedList<>();
+        //print();
+
+        Queue<int[]> tails = new LinkedList<>();
 
 
         int[] dr = new int[]{-1, 0, 1, 0};
@@ -76,6 +78,7 @@ public class Main {
 
                 mat[headR][headC] = 't';
                 mat[nextR][nextC] = 'h';
+                tails.add(new int[]{headR, headC, dir});
 
                 headR = nextR;
                 headC = nextC;
