@@ -63,6 +63,11 @@ public class Main {
                 int nextR = headR + dr[dir];
                 int nextC = headC + dc[dir];
 
+                if (!inRange(nextR, nextC)) {
+                    ended = true;
+                    break;
+                }
+                
                 if (!(mat[nextR][nextC] == 'a') && !tails.isEmpty()) {
                     mat[tails.peek()[0]][tails.peek()[1]] = ' ';
                     tailR += dr[tails.peek()[2]];
@@ -71,7 +76,7 @@ public class Main {
                     tails.poll();
                 }
 
-                if (!inRange(nextR, nextC) || mat[nextR][nextC] == 't') {
+                if (mat[nextR][nextC] == 't') {
                     ended = true;
                     break;
                 }
