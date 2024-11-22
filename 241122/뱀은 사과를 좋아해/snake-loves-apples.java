@@ -67,7 +67,10 @@ public class Main {
                     ended = true;
                     break;
                 }
-                
+
+                mat[headR][headC] = 't';
+                tails.add(new int[]{headR, headC, dir});
+
                 if (!(mat[nextR][nextC] == 'a') && !tails.isEmpty()) {
                     mat[tails.peek()[0]][tails.peek()[1]] = ' ';
                     tailR += dr[tails.peek()[2]];
@@ -81,10 +84,8 @@ public class Main {
                     break;
                 }
 
-                mat[headR][headC] = 't';
                 mat[nextR][nextC] = 'h';
-                tails.add(new int[]{headR, headC, dir});
-
+                
                 headR = nextR;
                 headC = nextC;
             }
