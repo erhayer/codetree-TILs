@@ -7,6 +7,7 @@ public class Main {
     public static int n;
     public static int m;
     public static int grid[][];
+    public static int numPos[][];
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,7 +17,7 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
 
-        int[][] numPos = new int[n*n + 1][2];
+        numPos = new int[n*n + 1][2];
         grid = new int[n][n];
 
         for (int i = 0; i < n; i++) {
@@ -29,6 +30,31 @@ public class Main {
             }
         }
 
+        for (int i = 0; i < m; i++) {
+            simulate();
+        }
+
+        printGrid();
+    }
+
+    public static boolean inRange(int r, int c) {
+        return r >= 0 && r < n && c >= 0 && c < n;
+    }
+
+    public static void printGrid() {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0 ; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                sb.append(grid[i][j]).append(" ");
+            }
+            sb.append("\n");
+        }
+
+        System.out.println(sb);
+    }
+
+    public static void simulate() {
         int[] dr = new int[]{-1, -1, 0, 1, 1, 1, 0, -1};
         int[] dc = new int[]{0, 1, 1, 1, 0, -1, -1, -1};
 
@@ -59,24 +85,5 @@ public class Main {
             grid[r][c] = grid[maxR][maxC];
             grid[maxR][maxC] = temp;
         }
-
-        printGrid();
-    }
-
-    public static boolean inRange(int r, int c) {
-        return r >= 0 && r < n && c >= 0 && c < n;
-    }
-
-    public static void printGrid() {
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0 ; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                sb.append(grid[i][j]).append(" ");
-            }
-            sb.append("\n");
-        }
-
-        System.out.println(sb);
     }
 }
