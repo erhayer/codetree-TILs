@@ -20,9 +20,9 @@ class Marble implements Comparable<Marble>{
     @Override
     public int compareTo(Marble marble) {
         if (this.v != marble.v) {
-            return this.v - marble.v;
+            return -(this.v - marble.v);
         } else {
-            return this.num - marble.num;
+            return -(this.num - marble.num);
         }
     }
 }
@@ -52,9 +52,12 @@ public class Main {
         for (int i = 0; i < m; i++) {
             marbles[i] = new Marble(i, sc.nextInt()-1, sc.nextInt()-1, dirMapper(sc.next().charAt(0)), sc.nextInt());
         }
+        
+        Arrays.sort(marbles);
 
         for (int i = 0; i < t; i++) {
             simulate();
+            //System.out.println();
         }
 
         System.out.println(m - removedMarbles.size());
@@ -80,8 +83,6 @@ public class Main {
                 nextGrid[i][j] = new ArrayList<>();
             }
         }
-
-        Arrays.sort(marbles);
 
         for (int i = 0; i < m; i++) {
             boolean isRemovedMarble = false; 
@@ -120,6 +121,12 @@ public class Main {
                 }
             }
         }
+
+        // for (int i = 0; i < m; i++) {
+        //     System.out.println(marbles[i].num + " " + marbles[i].r + " " + marbles[i].c + " " + marbles[i].dir + " " + marbles[i].v);
+        // }
+
+        // System.out.println(removedMarbles.size());
     }
 
     public static boolean inRange(int r, int c) {
