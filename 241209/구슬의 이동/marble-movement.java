@@ -84,9 +84,9 @@ public class Main {
         Arrays.sort(marbles);
 
         for (int i = 0; i < m; i++) {
-            boolean isRemovedMarble = false;
+            boolean isRemovedMarble = false; 
             for (int j = 0; j < removedMarbles.size(); j++) {
-                if (removedMarbles.get(j) == i) {
+                if (removedMarbles.get(j) == marbles[i].num) {
                     isRemovedMarble = true; 
                     break;
                 }
