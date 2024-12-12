@@ -39,7 +39,7 @@ public class Main {
         isExcepted  = new boolean[m+1];
         grid = new int[n][n];
 
-        for (int i = m; i > 0; i--) {
+        for (int i = 1; i <= m; i++) {
             marbles[i] = new Marble(sc.nextInt()-1, sc.nextInt()-1, DirMapper(sc.next().charAt(0)), sc.nextInt());
         }
 
@@ -52,6 +52,8 @@ public class Main {
         }
 
         System.out.println(num + " " + getMaxWeight());
+
+        printMarbles();
     }
 
     public static void simulate() {
@@ -93,6 +95,14 @@ public class Main {
         }
 
         return max;
+    }
+
+    public static void printMarbles() {
+        for (int i = m; i > 0; i--) {
+            if (isExcepted[i]) continue;
+            
+            //System.out.println(i + ": " + marbles[i].r + " " + marbles[i].c + " " + marbles[i].d + " " + marbles[i].w);
+        }
     }
 
     public static int DirMapper(char dirChar) {
