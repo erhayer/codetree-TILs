@@ -39,7 +39,7 @@ public class Main {
                 grid[i] = 1;
             }
 
-            cnt = Math.max(countNotOverlappingLines(index + 1, count+1), cnt);
+            cnt = countNotOverlappingLines(index + 1, count+1);
 
             for (int i = lines[index][0]; i <= lines[index][1]; i++) {
                 grid[i] = 0;
