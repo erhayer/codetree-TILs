@@ -6,12 +6,12 @@ public class Main {
     public static int[] charMapper = new int['z' + 1];
     public static int[] numMapper = new int[26];
 
-    public static int maxResult = 0;
+    public static int maxResult = Integer.MIN_VALUE;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        query = sc.next();
+        query = sc.nextLine();
         length = query.length();
 
         for (int i = 0; i < 26; i++) {
@@ -21,6 +21,8 @@ public class Main {
         bruteForce(0);
 
         System.out.println(maxResult);
+
+        
     }
 
     public static int calculate() {
@@ -43,6 +45,7 @@ public class Main {
     public static void bruteForce(int num) {
         if (num >= 6) {
             maxResult = Math.max(calculate(), maxResult);
+
             return;
         }
 
