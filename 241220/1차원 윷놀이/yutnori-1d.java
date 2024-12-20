@@ -45,6 +45,10 @@ public class Main {
     }
 
     public static void findMaxScore(int index) {
+        if (isAll()) {
+            maxScore = k;
+            return;
+        }
         if (index >= n) {
             maxScore = Math.max(calc(), maxScore);
             return;
@@ -53,11 +57,12 @@ public class Main {
         for (int i = 0; i < k; i++) {
             if (tokens[i] >= m) {
                 continue;
+            } else {
+                tokens[i] += dists[index];
+                findMaxScore(index + 1);
+                tokens[i] -= dists[index];
             }
 
-            tokens[i] += dists[index];
-            findMaxScore(index + 1);
-            tokens[i] -= dists[index];
         }
     }
 
@@ -71,5 +76,15 @@ public class Main {
         }
 
         return score;
+    }
+
+    public static boolean isAll() {
+        for (int i = 0; i < k; i++) {
+            if (tokens[i] < m) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 }
