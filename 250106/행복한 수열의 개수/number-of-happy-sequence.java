@@ -20,10 +20,10 @@ public class Main {
         for (int i = 0; i < n; i++) {
             //find happy row
 
-            int currR = grid[i][0];
-            int cntR = 1;
+            int currR = -1;
+            int cntR = 0;
 
-            for (int j = 1; j < n; j++) {
+            for (int j = 0; j < n; j++) {
                 int r = grid[i][j];
 
                 if (r == currR) {
@@ -41,10 +41,10 @@ public class Main {
 
             //find happy col
 
-            int currC = grid[0][i];
-            int cntC = 1;
+            int currC = -1;
+            int cntC = 0;
 
-            for (int j = 1; j < n; j++) {
+            for (int j = 0; j < n; j++) {
                 int c = grid[j][i];
 
                 if (c == currC) {
