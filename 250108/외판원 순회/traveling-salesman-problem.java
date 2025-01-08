@@ -32,7 +32,9 @@ public class Main {
 
     public static void findMinPath(int cnt, int sum, int lastNord) {
         if (cnt == n) {
-            min = Math.min(sum + matrix[lastNord][0], min);
+            if (matrix[lastNord][0] != 0) {
+                min = Math.min(sum + matrix[lastNord][0], min);
+            }
             return;
         }
 
