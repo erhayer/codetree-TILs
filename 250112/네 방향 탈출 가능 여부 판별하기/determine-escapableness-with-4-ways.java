@@ -79,6 +79,6 @@ public class Main {
     }
 
     public static boolean inRange(int r, int c) {
-        return r >= 0 && r < n && c >= 0 && c < n;
+        return r >= 0 && r < n && c >= 0 && c < m;
     }
 }
