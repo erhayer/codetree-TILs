@@ -26,7 +26,7 @@ public class Main {
         }
 
         int maxCnt = 0;
-        int minK = 100;
+        int minK = 1;
 
         for (int k = 1; k < 100; k++) {
             findSafeArea(k);
