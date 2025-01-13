@@ -78,7 +78,7 @@ public class Main {
             int r = node.r;
             int c = node.c;
 
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < 4; i++) {
                 int nr = r + dr[i];
                 int nc = c + dc[i];
 
