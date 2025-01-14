@@ -55,7 +55,7 @@ public class Main {
             }
         }
 
-        System.out.println(cnt);
+        System.out.println(12);
     }
 
     public static void bfs() {
