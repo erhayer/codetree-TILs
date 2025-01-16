@@ -66,6 +66,6 @@ public class Main {
     }
 
     public static boolean canGo(int r, int c) {
-        return r >= 0 && r < n && c >= 0 && c < n && grid[r][c] == 1 && !visited[r][c];
+        return r >= 0 && r < n && c >= 0 && c < m && grid[r][c] == 1 && !visited[r][c];
     }
 }
