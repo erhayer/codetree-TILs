@@ -40,7 +40,7 @@ public class Main {
 
         int max = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 max = Math.max(max, dp[i][j]);
                 //System.out.print(dp[i][j] + " ");
             }
