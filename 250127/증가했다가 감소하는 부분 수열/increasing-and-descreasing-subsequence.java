@@ -70,7 +70,7 @@ public class Main {
             }
         }
 
-        max = Math.max(ascDp[i], max);
+        max = Math.max(ascDp[n - 1], max);
 
         System.out.println(max);
     }
