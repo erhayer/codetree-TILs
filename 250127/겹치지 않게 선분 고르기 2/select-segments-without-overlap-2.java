@@ -12,7 +12,7 @@ class Line implements Comparable<Line>{
 
     @Override
     public int compareTo(Line o) {
-        return this.x2 - o.x2;
+        return this.x1 - o.x1;
     }
 }
 public class Main {
@@ -29,15 +29,24 @@ public class Main {
 
         Arrays.sort(lines);
 
-        int cnt = 0;
-        int lastX2 = -1;
+        int[] dp = new int[n];
+
         for (int i = 0; i < n; i++) {
-            if (lines[i].x1 > lastX2) {
-                cnt++;
-                lastX2 = lines[i].x2;
+            int len = 1;
+            for (int j = 0; j < i; j++) {
+                if (lines[j].x2 < lines[i].x1) {
+                    len = Math.max(len, dp[j] + 1);
+                }
             }
+
+            dp[i] = len;
         }
 
-        System.out.println(cnt);
+        int max = 0;
+        for (int i = 0; i < n; i++) {
+            max = Math.max(dp[i], max);
+        }
+
+        System.out.println(max);
     }
 }
