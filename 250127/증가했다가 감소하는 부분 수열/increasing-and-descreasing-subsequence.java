@@ -61,13 +61,16 @@ public class Main {
 
         int max = decDp[0];
 
-        for (int i = 0; i < n; i++) {
-            if (i < n - 1) {
-                max = Math.max(ascDp[i] + decDp[i + 1], max);
-            } else {
-                max = Math.max(ascDp[i], max);
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] > arr[j]) {
+                    max = Math.max(ascDp[i] + decDp[j], max);
+                    break;
+                }
             }
         }
+
+        max = Math.max(ascDp[i], max);
 
         System.out.println(max);
     }
