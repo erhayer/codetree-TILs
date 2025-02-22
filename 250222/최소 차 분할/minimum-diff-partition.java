@@ -12,7 +12,7 @@ public class Main {
 
         n = sc.nextInt();
         nums = new int[n + 1];
-        dp = new boolean[n + 1][MAX_NUM];
+        dp = new boolean[n + 1][MAX_NUM * n + 1];
 
         dp[0][0] = true;
 
@@ -20,16 +20,17 @@ public class Main {
             nums[i] = sc.nextInt();
         }
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 0; j < MAX_NUM; j++) {
-                if ((j + nums[i] < MAX_NUM && dp[i - 1][j + nums[i]]) || dp[i - 1][Math.abs(j - nums[i])]) {
-                    dp[i][j] = true;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= MAX_NUM * n; j++) {
+                if(dp[i][j]) {
+                    dp[i + 1][j + nums[i + 1]] = true;
+                    dp[i + 1][Math.abs(j - nums[i + 1])] = true;
                 }
             }
         }
 
         int min = MAX_NUM;
-        for (int i = 0; i < MAX_NUM; i++) {
+        for (int i = 0; i <= MAX_NUM * n; i++) {
             if(dp[n][i]) {
                 min = i;
                 break;
