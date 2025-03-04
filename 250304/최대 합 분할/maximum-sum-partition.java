@@ -11,18 +11,17 @@ public class Main {
             m += arr[i];
         }
         
-        boolean[][][] dp = new boolean[n + 1][m + 1][m + 1];
-        dp[0][0][0] = true;
+        boolean[][] dp = new boolean[m + 1][m + 1];
+        dp[0][0] = true;
 
         for (int i = 1; i <= n; i++) {
             int num = arr[i];
 
-            for (int j = 0; j <= m; j++) {
-                for (int k = 0; k <= m; k++) {
-                    if (dp[i - 1][j][k]) {
-                        dp[i][j][k] = true;
-                        dp[i][j + num][k] = true;
-                        dp[i][j][num + k] = true;
+            for (int j = m; j >= 0; j--) {
+                for (int k = m; k >= 0; k--) {
+                    if (dp[j][k]) {
+                        dp[j + num][k] = true;
+                        dp[j][num + k] = true;
                     }
                 }
             }
@@ -30,7 +29,7 @@ public class Main {
 
         int max = 0;
         for (int i = 0; i <= m; i++) {
-            if (dp[n][i][i]) {
+            if (dp[i][i]) {
                 max = i;
             }
         }
