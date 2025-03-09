@@ -17,6 +17,12 @@ public class Main {
             dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
         }
 
-        System.out.println(dp[n - 1]);
+        int ans = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            ans = Math.max(ans, dp[i]);
+        }
+
+        System.out.println(ans);
     }
 }
