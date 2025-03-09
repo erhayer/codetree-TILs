@@ -17,7 +17,7 @@ public class Main {
         dp[0] = true;
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 0; j <= n; j++) {
+            for (int j = n; j >= 0; j--) {
                 if (dp[j]) {
                     dp[j + arr[i]] = true;
                 }
