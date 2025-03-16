@@ -40,7 +40,7 @@ public class Main {
 
                 if (cards2[i] < cards1[j]) {
                     dp[i + 1][j] = Math.max(dp[i][j] + cards2[i], dp[i + 1][j]);
-                } else if (cards2[i] > cards1[i]) {
+                } else if (cards2[i] > cards1[j]) {
                     dp[i][j + 1] = Math.max(dp[i][j], dp[i][j + 1]);
                 }
             }
@@ -55,6 +55,15 @@ public class Main {
             }
         }
 
+        // StringBuilder sb = new StringBuilder();
+        // for (int i = 0; i <= n; i++) {
+        //     for (int j = 0; j <= n; j++) {
+        //         sb.append(dp[i][j]).append(" ");
+        //     }
+        //     sb.append("\n");
+        // }
+
+        // System.out.println(sb);
         System.out.println(max);
     }
 }
