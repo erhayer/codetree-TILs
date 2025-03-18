@@ -4,6 +4,8 @@ public class Main {
     public static final int MAX_T = 3;
     public static final int MAX_B = 3;
 
+    public static final int MOD = 1000000007;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -17,15 +19,15 @@ public class Main {
             for (int j = 0; j < MAX_B; j++) {
                 for (int k = 0; k < MAX_T; k++) {
                     if (j < MAX_B - 1) { // B를 마지막에 붙이는 경우
-                        dp[i + 1][j + 1][k] += dp[i][j][k];
+                        dp[i + 1][j + 1][k] = (dp[i + 1][j + 1][k] + dp[i][j][k]) % MOD;
                     }
 
                     if (k < MAX_T - 1) { // T를 마지막에 붙이는 경우
-                        dp[i + 1][0][k + 1] += dp[i][j][k];
+                        dp[i + 1][0][k + 1] = (dp[i + 1][0][k + 1] + dp[i][j][k]) % MOD;
                     }
 
                     //G를 붙이는 경우
-                    dp[i + 1][0][k] += dp[i][j][k];
+                    dp[i + 1][0][k] = (dp[i + 1][0][k] + dp[i][j][k]) % MOD;
                 }
             }
         }
@@ -34,7 +36,7 @@ public class Main {
 
         for (int j = 0; j < MAX_B; j++) {
             for (int k = 0; k < MAX_T; k++) {
-                sum += dp[n][j][k];
+                sum = (sum + dp[n][j][k]) % MOD;
             }
         }
 
