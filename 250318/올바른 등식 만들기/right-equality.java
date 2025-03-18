@@ -8,7 +8,7 @@ public class Main {
     private static final int OFFSET = MAX_N;
     
     private static int[] arr;
-    private static int[][] dp; // dp[i][j]: i번째까지 고려했을 때 합이 j가 될 수 있는 경우의 수
+    private static long[][] dp; // dp[i][j]: i번째까지 고려했을 때 합이 j가 될 수 있는 경우의 수
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        dp = new int[n + 1][MAX_N * 2 + 1];
+        dp = new long[n + 1][MAX_N * 2 + 1];
         dp[0][0 + OFFSET] = 1;
 
         for (int i = 0; i < n; i++) {
